@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+.entire-body {
+    position: relative;
+    width: 100%;
+    height: 150vh;
+    background-image: url('H:/STARTUP/egroot/src/images/circuit.jpg'); /* Background circuit */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Darken the background */
+.entire-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.banner-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    justify-content: space-between; /* Separate content and image */
+    align-items: center;
+    padding: 20px;
+}
+
+/* Adjust content layout */
+.content-container {
+    width: 400px;
+    padding-right: 20px;
+    margin-left: 200px;
+}
+
+.content-container h1 {
+    font-family: "Josefin Sans", serif;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 35px;
+}
+
+.content-container p {
+    font-family: "Josefin Sans", serif;
+    font-size: 1.1rem;
+    max-width: 700px;
+    color: white;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Circuit image on the left */
+.circuit-image {
+    flex: 1;
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.circuit-image-display{
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+}
+/* Who We Are Section */
+.who-we-are-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    justify-content: space-between; /* Separate content and image */
+    align-items: center;
+    padding: 20px;
+    margin-top: 100px;
+    gap: 200px;
+}
+
+/* Image container for the Groot image */
+.image-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.groot-image {
+    width: 375px;
+    height: 470px;
+    border-radius: 25px;
+}
+
+/* Text container next to the image */
+.text-container {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    
+}
+
+.text-container h2 {
+    font-family: "Josefin Sans", serif;
+    font-size: 3rem;
+    color: white;
+}
+
+.text-container p {
+    font-family: "Josefin Sans", serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+    width: 90%;
+    font-weight: 500;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner-container {
+        flex-direction: column; /* Stack image and text */
+    }
+
+    .groot-image {
+        max-width: 200px;
+    }
+
+    .who-we-are-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-container {
+        padding: 10px;
+    }
+}

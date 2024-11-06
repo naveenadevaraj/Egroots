@@ -1,0 +1,132 @@
+/* General styles for the home page */
+.homepage {
+  position: relative; /* Needed for layering video and content */
+  height: 100vh;
+  overflow: hidden; /* Hide any overflow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Full-screen video background */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Ensure video covers the entire screen */
+  z-index: -1; /* Place it behind the content */ /* Optional: Apply some transparency to the video */
+}
+
+/* Content on top of the video */
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+/* Headline styling */
+.headline {
+  font-size: 4.5rem;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  text-align: center;
+  background-clip: text; /* Clipping effect applied to text */
+  -webkit-background-clip: text;
+  color: transparent; /* Text will become transparent to show the background video through it */
+  background-image: linear-gradient(to right, #ffffff, #ffffff); /* Fallback gradient for unsupported browsers */
+}
+
+/* Subheadline */
+.subheadline {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Button styles */
+.buttons {
+  margin-top: 50px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.shop-button {
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  width: 150px;
+  height: 50px;
+}
+
+.call-button {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
+  width: 150px;
+  height: 50px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Media Queries */
+@media only screen and (max-width: 1024px) {
+  .headline {
+    font-size: 48px;
+  }
+
+  .subheadline {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .headline {
+    font-size: 42px;
+  }
+
+  .subheadline {
+    font-size: 0.85rem;
+  }
+
+  button {
+    padding: 7px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .headline {
+    font-size: 36px;
+  }
+
+  .subheadline {
+    font-size: 0.8rem;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
