@@ -1,5 +1,5 @@
 import React from 'react';
-import './style/TechBanner.css'; // Ensure this file has the CSS below
+import './style/TechBanner.css'; 
 import groot from '../images/groot.jpg';
 import { Helmet } from 'react-helmet';
 import pcb from '../images/pcb.jpeg';
