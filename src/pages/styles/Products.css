@@ -1,0 +1,132 @@
+.sub-heading{
+    text-align: center;
+    font-size: 15px;
+    color: rgb(90, 90, 90);
+}
+.heading{
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(45, 45, 45);
+}
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+  }
+.product-container{
+    margin-top: 100px;
+    height: 700px;
+}
+  .category {
+    position: relative;
+    width: 25%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    height: 500px;
+  }
+  
+  .educational-kit {
+    background-image: url('../photos/kit.jpg'); /* Update this with your actual image path */
+  }
+  
+  .competition-bots {
+    background-image: url('../photos/bot.png'); /* Update this with your actual image path */
+  }
+  
+  .custom-pcb {
+    background-image: url('../photos/circuit.jpg'); /* Update this with your actual image path */
+  }
+  
+  /* Style for the overlay container */
+.overlay {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  color: white; /* Text color */
+  padding: 20px;
+  text-align: left;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  padding: 40px;
+}
+
+/* Style for h2 inside overlay */
+.overlay h2 {
+  
+  margin-top: 250px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Style for p inside overlay */
+.overlay p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Optional button styling */
+.overlay .button {
+  color: white;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  display: block; /* Makes the button take up the full width available */
+  margin: 0 auto; /* This will center the button horizontally */
+  text-align: center;
+}
+
+.overlay .button:hover {
+  background-color: rgba(0, 0, 0, 10); /* Darken on hover */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .category {
+      width: 45%; /* Two items per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .category {
+      width: 100%; /* Single item per row */
+  }
+
+  .overlay h2 {
+      font-size: 18px;
+  }
+
+  .overlay p {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+      font-size: 1.2rem;
+  }
+
+  .overlay h2 {
+      font-size: 16px;
+  }
+
+  .overlay p {
+      font-size: 12px;
+  }
+
+  .overlay .button {
+      padding: 8px 16px;
+  }
+}

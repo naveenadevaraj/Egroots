@@ -1,0 +1,251 @@
+/* General Body and Section Styles */
+.entire-body {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 50px; /* Added padding for separation */
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 15px;
+    color: rgb(90, 90, 90);
+}
+
+.heading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(45, 45, 45);
+}
+
+/* About Section */
+.who-we-are-container {
+    border-radius: 25px;
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    min-height: 70vh; /* Changed from height to min-height for flexibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Space between sections */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.groot-image {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.zoom-out-image {
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
+}
+
+.zoom-out-image:hover {
+    transform: scale(1);
+}
+
+.text-container {
+    flex: 2;
+    text-align: center;
+}
+
+.text-container h2 {
+    font-family: "Josefin Sans", serif;
+    font-size: 3rem;
+    color: black;
+}
+
+.text-container p {
+    font-family: "Josefin Sans", serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: black;
+    width: 90%;
+    font-weight: 500;
+}
+
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+}
+
+.product-container {
+    margin-top: 100px;
+    height: auto; /* Flexible height for responsiveness */
+}
+
+/* Category Styles */
+.category {
+    position: relative;
+    width: 25%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
+.educational-kit {
+    background-image: url('../photos/kit.jpg');
+}
+
+.competition-bots {
+    background-image: url('../photos/bot.png');
+}
+
+.custom-pcb {
+    background-image: url('../photos/circuit.jpg');
+}
+
+/* Overlay Styles */
+.overlay {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    padding: 40px;
+}
+
+.overlay h2 {
+    margin-top: 250px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.overlay p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.overlay .button {
+    color: white;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.overlay .button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    .entire-body{
+        margin-top: 20px;
+    }
+    .who-we-are-container {
+        flex-direction: column;
+        height: auto; /* Flexible height */
+    }
+
+    .groot-image {
+        max-width: 450px;
+    }
+
+    .text-container h2 {
+        font-size: 2rem;
+    }
+
+    .text-container p {
+        font-size: 0.95rem;
+    }
+
+    .category {
+        width: 70%;
+        height: 500px;
+    }
+
+    .overlay .button{
+        height: 50px;
+    }
+
+    .overlay h2 {
+        font-size: 18px;
+    }
+
+    .overlay p {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+
+    .entire-body{
+        margin-top: 0px;
+    }
+    
+    .who-we-are-container {
+        flex-direction: column;
+        height: auto; /* Adjust for small screens */
+        padding: 10px;
+    }
+
+    .text-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .text-container p {
+        font-size: 0.9rem;
+    }
+
+    .groot-image {
+        max-width: 300px;
+    }
+
+    .product-container {
+        margin-top: 60px;
+        padding: 10px;
+    }
+
+    .category {
+        width: 100%;
+        height: 300px;
+    }
+
+    .overlay h2 {
+        font-size: 16px;
+    }
+
+    .overlay p {
+        font-size: 12px;
+    }
+
+    .overlay .button {
+        padding: 8px 16px;
+    }
+}

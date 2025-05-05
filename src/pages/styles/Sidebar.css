@@ -1,0 +1,230 @@
+/* Base Sidebar Styles */
+.sidebar {
+    width: 200px;
+    min-width: 200px;
+    flex-shrink: 0;
+    position: relative;
+    padding: 24px;
+    background-color: #ffffff;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  /* Header Styles */
+  .filters h3 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    margin-bottom: 24px;
+    color: #555;
+    position: relative;
+    padding-bottom: 8px;
+  }
+  
+  .filters h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #3a86ff;
+  }
+  
+  /* List Container */
+  .filter-category {
+    margin-top: 8px;
+  }
+  
+  /* List Styles */
+  .sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-links li {
+    margin-bottom: 16px;
+    transition: transform 0.2s ease;
+  }
+  
+  .sidebar-links li:hover {
+    transform: translateX(4px);
+  }
+  
+  /* Link Styles */
+  .sidebar-link {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #3a86ff;
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar-link:hover {
+    color: #3a86ff;
+  }
+  
+  .sidebar-link:hover::before {
+    width: 100%;
+  }
+  
+  /* Active Link State */
+  .sidebar-link.active {
+    color: #3a86ff;
+    font-weight: 600;
+  }
+  
+  .sidebar-link.active::before {
+    width: 100%;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (min-width: 769px) {
+    .sidebar {
+      height: 100vh;
+      position: sticky;
+      top: 0;
+    }
+  
+    .sidebar-links li:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  /* Tablet Styles */
+  @media screen and (max-width: 992px) {
+    .sidebar {
+      width: 200px;
+      min-width: 200px;
+      padding: 20px;
+    }
+  }
+  
+  /* Mobile Styles */
+  @media screen and (max-width: 768px) {
+    .sidebar {
+        width: calc(100% - 40px); /* Adjust to 80% of the screen width */
+        max-width: 768px; /* Limit the maximum width */
+        min-width: 300px; /* Ensure it doesn't shrink too small */
+        height: auto;
+        padding: 16px 20px;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto; /* Center the sidebar */
+    }
+  
+    .filters {
+      width: 100%;
+    }
+  
+    .filters h3 {
+      display: none;
+    }
+  
+    .filter-category {
+      width: 100%;
+    }
+  
+    .sidebar-links {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  
+    .sidebar-links li {
+      margin: 0;
+      flex: 1;
+      text-align: center;
+      min-width: 100px;
+    }
+  
+    .sidebar-links li:hover {
+      transform: none;
+    }
+  
+    .sidebar-link {
+      padding: 10px 8px;
+      font-size: 14px;
+    }
+  
+    .sidebar-link::before {
+      bottom: -2px;
+    }
+  }
+  
+  /* Small Mobile Styles */
+  @media screen and (max-width: 400px) {
+    .sidebar {
+      padding: 10px;
+      width: calc(100% - 20px);
+    }
+  
+    .sidebar-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .sidebar-links li {
+      margin-bottom: 8px;
+      width: 100%;
+    }
+  
+    .sidebar-link {
+      text-align: center;
+      padding: 5px 0;
+    }
+  }
+  
+  /* Dark Mode Support (Optional) */
+  @media (prefers-color-scheme: dark) {
+    .sidebar {
+      background-color: #1a1a1a;
+      border-right-color: rgba(255, 255, 255, 0.1);
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+  
+    .filters h3 {
+      color: #e0e0e0;
+    }
+  
+    .filters h3::after {
+      background-color: #60a5fa;
+    }
+  
+    .sidebar-link {
+      color: #e0e0e0;
+    }
+  
+    .sidebar-link:hover,
+    .sidebar-link.active {
+      color: #60a5fa;
+    }
+  
+    .sidebar-link::before,
+    .sidebar-link:hover::before {
+      background-color: #60a5fa;
+    }
+  }
+  
+  

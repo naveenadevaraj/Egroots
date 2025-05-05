@@ -1,0 +1,38 @@
+.cart-container{
+    display: flex;
+    padding: 40px;
+    gap: 50px;
+    justify-content: center;
+}
+.cart-empty{
+    height: 80px;
+}
+.cart-summary{
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 15px;
+    height: 200px;
+    text-align: center;
+    width: 350px;
+}
+.check-out{
+    border: 1px solid #000000;
+    border-radius: 15px;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+}
+.cart-list{
+    gap: 15px;
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    width: 800px;
+    margin-bottom: 20px;
+}
+.cart-image{
+    width: 200px;
+    border-radius: 5px;
+}

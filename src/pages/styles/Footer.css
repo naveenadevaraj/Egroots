@@ -1,0 +1,177 @@
+.footer-container {
+  background-color: #2E3B55;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.footer-left h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.queries-section p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.queries-section h3,
+.address-section h3,
+.contact-form h3 {
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.address-section p {
+  padding-left: 20px;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-frame iframe {
+  max-width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.footer-right {
+  text-align: left;
+}
+
+.email-input::placeholder {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.email-input {
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+}
+
+.subscribe-button {
+  height: 40px;
+  font-size: 0.9rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-center
+   {
+    text-align: center;
+  }
+  .footer-right{
+    text-align: left;
+  }
+
+  .footer-center iframe {
+    width: 100%;
+    height: 300px;
+  }
+  .subscribe-button {
+    height: 45px;
+    font-size: 0.8rem;
+    width: 250px;
+  }
+  .email-input{
+    width: 80%;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 0.7rem;
+  }
+
+  .queries-section p {
+    font-size: 0.8rem;
+    padding-left: 0;
+  }
+
+  .queries-section h3,
+  .address-section h3,
+  .contact-form h3 {
+    font-size: 0.9rem;
+  }
+
+  .email-input {
+    font-size: 0.8rem;
+    padding: 8px;
+    height: 30px;
+  }
+
+  .subscribe-button {
+    height: 35px;
+    font-size: 0.8rem;
+  }
+
+  .footer-center iframe {
+    width: 100%;
+    height: 250px;
+  }
+}

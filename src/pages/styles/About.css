@@ -1,0 +1,119 @@
+.entire-body {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Darken the background */
+.entire-body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+/* Who We Are Section */
+.who-we-are-container {
+    border-radius: 25px; /* Adds rounded corners */
+    padding: 20px;       /* Optional: Adds some padding inside */
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Image container for the Groot image */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.groot-image {
+    width: 500px;
+    height: 500px;
+}
+
+.zoom-out-image {
+    transform: scale(0.9); /* Keep the image zoomed out by default */
+    transition: transform 0.5s ease; /* Smooth transition */
+  }
+  
+  .zoom-out-image:hover {
+    transform: scale(1); /* Slight zoom-in effect on hover */
+  }
+/* Text container next to the image */
+.text-container {
+    flex: 2;
+}
+
+.text-container h2 {
+    font-family: "Josefin Sans", serif;
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+}
+
+.text-container p {
+    font-family: "Josefin Sans", serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: black;
+    width: 90%;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .who-we-are-container {
+        flex-direction: column; /* Stack image and text vertically */
+        height: auto;
+    }
+
+    .groot-image {
+        max-width: 300px; /* Smaller image size */
+    }
+
+    .text-container h2 {
+        font-size: 2rem;
+    }
+
+    .text-container p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+    .entire-body {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    .who-we-are-container {
+        flex-direction: column; /* Stack image and text vertically */
+        height: auto;
+    }
+    .text-container h2 {
+        font-size: 1.8rem; /* Smaller heading size */
+    }
+
+    .text-container p {
+        font-size: 0.9rem; /* Smaller text size */
+    }
+
+    .groot-image {
+        max-width: 250px; /* Smaller image size */
+    }
+}
